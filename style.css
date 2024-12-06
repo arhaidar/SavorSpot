@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*
+
+h1 {
+    color: rgb(9, 25, 104);
+}
+
+*/
+
+/* Home interface CSS */
+.home {
+    background-color: rgb(131, 180, 255);
+}
+
+.home_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 98vh;
+    background-color: rgb(131, 180, 255);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.home_item h1 {
+    font-size: 4rem;
+    background-color: rgb(237, 148, 16);
+    background-image: linear-gradient(to top, rgb(253, 255, 232) 0%, rgb(255, 226, 84) 33%, rgb(237, 115, 16) 66%, rgb(255, 64, 0) 100%);
+    background-size: 100%;
+    background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    /*Why is this not working properly?*/
+}
+
+.home_item p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.home_btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, rgb(99, 118, 255) 0%, rgb(29, 36, 255) 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.home_btn a {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.home_btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(237, 115, 16);
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.home_btn:hover {
+    color: rgb(0,0,0);
+}
+
+.home_btn:hover:after {
+    width: 100%;
+}
+
+.home_img_box {
+    text-align: center;
+}
+
+#home_img {
+    height: 75%;
+    width: 75%;
+}
+
+/*Home Interface -> Mobile Responsive */
+
+@media screen and (max-width: 768px) {
+    .home_box {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .home_item {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .home_item h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .home_item p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home_item h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .home_item p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .home_btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
