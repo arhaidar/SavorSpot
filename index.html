@@ -28,6 +28,70 @@
                 <p> Use the search bar below to find any specific recipes! </p>
                 <input type=text name=recipeName size=32 maxlength=80 placeholder="Enter the recipe's name"> <!--Should we add required?-->
                 <button class="home_btn"> <a href="/"> Find recipe </a></button>
+                
+                <!--I am trying to implement the More options button-->
+                
+                <a href="/" id="moreop_button"> More options </a>
+                <div class="moreop_toggle" id="button-both">
+                    <span class="bar"></span> <!--shift+alt+down arrow to copy the line downwards-->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="moreop_menu">
+                    <li class="moreop_item">
+                        <input type=text name=ingredientName size=32 maxlength=80 placeholder="Enter the ingredient's name">
+                    </li>
+                    <li class="moreop_item">
+                        <input type=text name=allergiesName size=32 maxlength=80 placeholder="Any ingredients you want to avoid?">
+                    </li>
+
+                    <!--Instead of searchbars, why not dropdown lists?-->
+
+                    <li class="moreop_item">
+                        <label for="cookTime"> Cooking time: </label>
+                        <select id="cookTime" name="time">
+                            <option value="none" selected> None in particular </option>
+                            <option value="-20"> -20 min </option>
+                            <option value="20-40"> 20 - 40 min </option>
+                            <option value="40-60"> 40 - 60 min </option>
+                            <option value="60+"> 60+ min </option>
+                        </select>
+                    </li>
+
+                    <li class="moreop_item">
+                        <label for="temperature"> Temperature: </label>
+                        <select id="temperature" name="hotCold">
+                            <option value="none" selected> None in particular </option>
+                            <option value="hot"> Hot </option>
+                            <option value="warm"> Warm </option>
+                            <option value="cold"> Cold </option>
+                        </select>
+                    </li>
+
+                    <li class="moreop_item">
+                        <label for="dishType"> What kind of dish? </label>
+                        <select id="dishType" name="typeOfDish">
+                            <option value="none" selected> None in particular </option>
+                            <option value="appetizer"> Appetizer </option>
+                            <option value="entree"> Entree </option>
+                            <option value="main"> Main Dish </option>
+                            <option value="dessert"> Dessert </option>
+                        </select>
+                    </li>
+
+                    <li class="moreop_item">
+                        <label for="difficulty"> Level of difficulty: </label>
+                        <select id="difficulty" name="howHard">
+                            <option value="none" selected> None in particular </option>
+                            <option value="easy"> Easy </option>
+                            <option value="medium"> Medium </option>
+                            <option value="hard"> Hard </option>
+                        </select>
+                    </li>
+                </ul>
+                
+                <!--End of attempt-->
+
             </div>
             <div class="home_img_box">
                 <img src="images/pic2.svg" alt="Two happy people cooking" id="home_img">
@@ -39,6 +103,7 @@
     <div class="empty_box">
         <!--Nothing here-->
     </div>
+
     <div class="footer_box">
         <div class="footer_links">
             <div class="footer_link-wrapper">
