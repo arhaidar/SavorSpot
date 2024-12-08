@@ -1,0 +1,38 @@
+h1 {
+    color: rgb(214, 104, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    color:rgb(125, 55, 15);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+    color:rgb(94, 23, 160);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+    color:rgb(62, 19, 101);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: rgb(255, 236, 173);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+@media only screen and (min-width: 700px) {
+    .flex-container {
+        display: flex;
+    }
+  }
+.button {
+    background-color: rgb(255, 128, 0);
+    border: 3px;
+    color: rgb(255, 94, 0);
+    text-align: center;
+    font-size: large;
+    cursor: grab;
+}
