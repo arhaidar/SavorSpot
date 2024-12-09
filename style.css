@@ -5,6 +5,10 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    background-color: rgb(131, 180, 255);
+}
+
 /*
 
 h1 {
@@ -257,4 +261,19 @@ h1 {
         padding: 10px;
         width: 100%;
     }
+}
+
+/*Search.html style*/
+
+.title_box {
+    /*display: block;*/
+    align-items: center;
+    justify-self: center;
+    /*margin: 0 auto;*/
+    /*height: 110vh;*/
+    background-color: rgb(131, 180, 255);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 150px;
 }
