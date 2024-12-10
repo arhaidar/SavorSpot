@@ -1,4 +1,4 @@
-const apiKey = "edebe1f3aab54b84b21fed375ef07917"; 
+const apiKey = "edebe1f3aab54b84b21fed375ef07917";
 const apiBaseUrl = "https://api.spoonacular.com";
 
 
@@ -6,7 +6,7 @@ const search_inp = document.getElementById("searchInput");
 const search_but = document.getElementById("searchButton");
 const lucky_but = document.getElementById("feelingLuckyButton");
 
-async function search_recipes(){
+async function search_recipes() {
     const query = search_inp.value.trim();
     if (!query) {
         alert("Please enter a recipe name!");
@@ -36,7 +36,7 @@ async function search_recipes(){
 
     try {
         const response = await fetch(`${apiBaseUrl}/recipes/complexSearch?${params}`);
-        if (!response.ok){
+        if (!response.ok) {
             resultsContainer.innerHTML = "<p>Error fetching recipes. Please try again later.</p>";
             return;
         }
