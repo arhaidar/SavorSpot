@@ -1,4 +1,27 @@
+<<<<<<< HEAD
 /* Center the Home Section */
+=======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(131, 180, 255);
+}
+
+/*
+
+h1 {
+    color: rgb(9, 25, 104);
+}
+
+*/
+
+/* Home interface CSS */
+>>>>>>> 46c9918f870fbae02b759263ca23577639712453
 .home {
     display: flex;
     justify-content: center;
@@ -225,4 +248,19 @@
     .home_item p {
         font-size: 0.9rem;
     }
+}
+
+/*Search.html style*/
+
+.title_box {
+    /*display: block;*/
+    align-items: center;
+    justify-self: center;
+    /*margin: 0 auto;*/
+    /*height: 110vh;*/
+    background-color: rgb(131, 180, 255);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 150px;
 }
