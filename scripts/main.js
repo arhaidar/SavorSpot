@@ -7,12 +7,29 @@ const search_but = document.getElementById("searchButton");
 const lucky_but = document.getElementById("feelingLuckyButton");
 
 async function search_recipes() {
+    console.log("search_recipes function called!"); // Debugging log
     const query = search_inp.value.trim();
     if (!query) {
         alert("Please enter a recipe name!");
         return;
     }
-    const cook_time = document.getElementById("cookTime").value;
+    const cook_time = document.getElementById("cookTime").value.trim();
+    let max_ready_time;
+    if (cook_time !== "none") {
+        max_ready_time = parseInt(cook_time, 10);
+        if (isNaN(max_ready_time)) {
+            console.log("cook time wasn't a valid number: " + cook_time);
+            max_ready_time = undefined; 
+        } else {
+            console.log("max_ready_time: " + max_ready_time);
+        }
+    } else {
+        console.log("No specific cook time selected: " + cook_time);
+        max_ready_time = undefined; // Explicitly skip this parameter
+    }
+
+    
+
     const dish_type = document.getElementById("dishType").value;
     const difficulty = document.getElementById("difficulty").value;
     const intolerances = document.getElementById("intolerances").value.trim();
@@ -28,28 +45,44 @@ async function search_recipes() {
     const params = new URLSearchParams({
         apiKey,
         query,
-        maxReadyTime: cook_time !== "none" ? cook_time : undefined,
+        max_ready_time: max_ready_time,
         type: dish_type !== "none" ? dish_type : undefined,
         intolerances: formatted_intolerances || undefined,
-        number: 10, // Number of recipes to fetch
+        number: 10, // Fetch 10 results
     });
 
     try {
         const response = await fetch(`${apiBaseUrl}/recipes/complexSearch?${params}`);
         if (!response.ok) {
-            resultsContainer.innerHTML = "<p>Error fetching recipes. Please try again later.</p>";
+            console.error(`Error: ${response.status} - ${response.statusText}`);
+            alert(`Error fetching recipes: ${response.statusText}`);
             return;
         }
 
         const data = await response.json();
         console.log("Search Results:", data);
 
+        if (!data.results || data.results.length === 0) {
+            alert("No recipes found. Try refining your search!");
+            return;
+        }
+
         localStorage.setItem("searchResults", JSON.stringify(data.results));
-        window.location.href = "/results.html"; // redirect to search results
-    } catch (error) {
+        window.location.href = "/pages/results.html";
+    } 
+    catch (error) {
         console.error("Error fetching recipes:", error);
         alert("Something went wrong. Please try again.");
     }
+
+
+    // Debugging
+    // try{
+    //     window.location.href = "/pages/results.html";
+    // }
+    // catch {
+    //     alert("Something went wrong. Please try again.");
+    // }
 }
 
 async function get_random_recipe() {

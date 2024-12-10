@@ -11,7 +11,6 @@
     text-align: center;
     width: 100%;
     max-width: 600px;
-    background-color: #ffffff;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 10px 10px 20px 20px rgba(14, 1, 1, 0.1);
@@ -200,7 +199,6 @@
     color: #ff8a00;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .home_box {
         padding: 20px;
