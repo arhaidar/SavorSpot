@@ -15,6 +15,7 @@ async function search_recipes() {
     }
     const cook_time = document.getElementById("cookTime").value.trim();
     let max_ready_time;
+    //DEBUG
     if (cook_time !== "none") {
         max_ready_time = parseInt(cook_time, 10);
         if (isNaN(max_ready_time)) {
@@ -25,7 +26,7 @@ async function search_recipes() {
         }
     } else {
         console.log("No specific cook time selected: " + cook_time);
-        max_ready_time = undefined; // Explicitly skip this parameter
+        max_ready_time = undefined; // skip this parameter
     }
 
     
@@ -34,14 +35,16 @@ async function search_recipes() {
     const difficulty = document.getElementById("difficulty").value;
     const intolerances = document.getElementById("intolerances").value.trim();
 
-    // replace the spaces/delims with a comma for the 
-    // API call -> requires comma separation:
-    /*          intolerances:	string	gluten	A comma-separated list of intolerances. 
+    // replace the spaces/delims with a comma for the API call -> requires comma separation:
+    /*  
+        intolerances:	        string	gluten	A comma-separated list of intolerances. 
                                 All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. 
                                 See a full list of supported intolerances.
     */
     const formatted_intolerances = intolerances ? intolerances.replace(/[\s,]+/g, ",").toLowerCase() : undefined; // https://www.w3schools.com/jsref/jsref_replace.asp
 
+    // how to exlclude parameters to API call: -> use undefined
+    // https://stackoverflow.com/questions/8356227/skipping-optional-function-parameters-in-javascript
     const params = new URLSearchParams({
         apiKey,
         query,
