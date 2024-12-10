@@ -1,115 +1,81 @@
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="authors" content="Andre Garate and Ahmad Haidari">
-    <meta name="description" content="SavorSpot">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SavorSpot</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!--Not sure about this-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <!--List of links at top of the page here-->
-    </nav>
-    <!--<h1> Okay, here we go! </h1>-->
-
-    <!--Title section-->
-
     <div class="home">
         <div class="home_box">
             <div class="home_item">
-                <h1> What do you want to cook today? </h1>
-                <p> Use the search bar below to find any specific recipes! </p>
-                <input type=text name=recipeName size=32 maxlength=80 placeholder="Enter the recipe's name"> <!--Should we add required?-->
-                <button class="home_btn"> <a href="/"> Find recipe </a></button>
-                
-                <!--I am trying to implement the More options button-->
-                
-                <!-- <a href="/" id="moreop_button"> More options </a> --> <!--Perhaps we don't need this-->
-                <h4 class="moreop"> More search options: </h4>
+                <h1 id="typingEffect">What do you want to cook today?</h1>
+                <p>Use the search bar below to find any specific recipes!</p>
+                <input id="searchInput" class="user_input" type="text" name="recipeName" placeholder="Enter the recipe's name">
+                <button id="searchButton" class="home_btn">Find Recipe</button>
+                <button id="feelingLuckyButton" class="home_btn">Feeling Lucky?</button>
+
+                <h4 class="moreop">More search options:</h4>
                 <ul class="moreop_menu">
                     <li class="moreop_item">
-                        <input type=text name=ingredientName size=32 maxlength=80 placeholder="Enter ingredients">
+                        <input id="intolerances" type="text" name="allergiesName" size="32" maxlength="80"
+                            placeholder="e.g., gluten, dairy, nuts">
                     </li>
                     <li class="moreop_item">
-                        <input type=text name=allergiesName size=32 maxlength=80 placeholder="Any ingredients you want to avoid?">
-                    </li>
-
-                    <!--Instead of searchbars, why not dropdown lists?-->
-
-                    <li class="moreop_item">
-                        <label for="cookTime"> Cooking time: </label>
+                        <label for="cookTime">Cooking time:</label>
                         <select id="cookTime" name="time">
-                            <option value="none" selected> None in particular </option>
-                            <option value="-20"> -20 min </option>
-                            <option value="20-40"> 20 - 40 min </option>
-                            <option value="40-60"> 40 - 60 min </option>
-                            <option value="60+"> 60+ min </option>
+                            <option value="none" selected>None in particular</option>
+                            <option value="20">Up to 20 min</option>
+                            <option value="40">Up to 40 min</option>
+                            <option value="60">Up to 60 min</option>
                         </select>
                     </li>
-
                     <li class="moreop_item">
-                        <label for="temperature"> Temperature: </label>
-                        <select id="temperature" name="hotCold">
-                            <option value="none" selected> None in particular </option>
-                            <option value="hot"> Hot </option>
-                            <option value="warm"> Warm </option>
-                            <option value="cold"> Cold </option>
-                        </select>
-                    </li>
-
-                    <li class="moreop_item">
-                        <label for="dishType"> What kind of dish? </label>
+                        <label for="dishType">What kind of dish?</label>
                         <select id="dishType" name="typeOfDish">
-                            <option value="none" selected> None in particular </option>
-                            <option value="appetizer"> Appetizer </option>
-                            <option value="entree"> Entree </option>
-                            <option value="main"> Main Dish </option>
-                            <option value="dessert"> Dessert </option>
+                            <option value="none" selected>None in particular</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="main course">Main Dish</option>
+                            <option value="dessert">Dessert</option>
                         </select>
                     </li>
-
                     <li class="moreop_item">
-                        <label for="difficulty"> Level of difficulty: </label>
+                        <label for="difficulty">Level of difficulty:</label>
                         <select id="difficulty" name="howHard">
-                            <option value="none" selected> None in particular </option>
-                            <option value="easy"> Easy </option>
-                            <option value="medium"> Medium </option>
-                            <option value="hard"> Hard </option>
+                            <option value="none" selected>None in particular</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
                         </select>
                     </li>
                 </ul>
-                
-                <!--End of attempt-->
-
             </div>
-            <div class="home_img_box">
+            <!-- <div class="home_img_box">
                 <img src="images/pic2.svg" alt="Two happy people cooking" id="home_img">
-            </div>
+            </div> -->
         </div>
     </div>
 
     <!-- Footer Section -->
-    <div class="empty_box">
-        <!--Nothing here-->
-    </div>
-
-    <div class="footer_box">
+    <footer class="footer_box">
         <div class="footer_links">
             <div class="footer_link-wrapper">
                 <div class="footer_link-items">
-                    <h2> About us: </h2>
-                    <a href="/A5/SavorSpot/Andre.html"> Garate's website </a>
-                    <a href="/"> Haidari's website </a>
+                    <h2>About Us</h2>
+                    <a href="/about.html">Learn More</a>
+                </div>
+                <div class="footer_link-items">
+                    <h2>Contact</h2>
+                    <a href="mailto:support@savorspot.com">Email Us</a>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>
