@@ -14,7 +14,7 @@ header {
     color: #ff8a00;
 }
 header .res-text {
-    color: black
+    color: #555
 }
 
 header h1 {
@@ -45,7 +45,6 @@ header p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Ensures proper spacing between content */
 }
 
 .recipe-card:hover {
