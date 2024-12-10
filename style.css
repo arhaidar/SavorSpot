@@ -85,7 +85,7 @@
 
 .home_btn {
     display: inline-block;
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /*https: //codepen.io/thebabydino/pen/jBbXPP*/
     color: white;
     padding: 10px 20px;
     margin: 10px;
@@ -102,7 +102,6 @@
     background: linear-gradient(90deg, #e52e71, #ff8a00);
 }
 
-/* Align more search options neatly */
 .moreop {
     font-size: 1.5rem;
     margin-top: 30px;
@@ -149,7 +148,6 @@
     border-color: #ff8a00;
 }
 
-/* Footer Section */
 .footer_box {
     background-color: #333;
     color: white;
@@ -230,8 +228,6 @@
         font-size: 0.9rem;
     }
 }
-
-/*Search.html style*/
 
 .title_box {
     /*display: block;*/
