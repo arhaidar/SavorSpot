@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="recipe-card">
             <img src="${recipe.image}" alt="${recipe.title}">
             <h2>${recipe.title}</h2>
-            <a href="/recipeDetails.html?id=${recipe.id}" class="view-button">View Recipe</a>
+            <a href="/pages/recipeDetails.html?id=${recipe.id}" class="view-button">View Recipe</a>
         </div>
     `).join("");
 });
