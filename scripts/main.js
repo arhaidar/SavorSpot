@@ -96,7 +96,6 @@ async function get_random_recipe() {
         const data = await response.json();
         console.log("Random Recipe:", data);
 
-        // Redirect or Display Recipe
         localStorage.setItem("randomRecipe", JSON.stringify(data.recipes[0]));
         window.location.href = "/randomRecipe.html";
     } catch (error) {
