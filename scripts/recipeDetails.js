@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const apiKey = "edebe1f3aab54b84b21fed375ef07917"; 
+    const apiKey = "3d91f234c65044319765466987a45926"; 
     const apiBaseUrl = "https://api.spoonacular.com";
 
     const urlParams = new URLSearchParams(window.location.search);
