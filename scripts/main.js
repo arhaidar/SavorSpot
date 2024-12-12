@@ -71,8 +71,7 @@ async function search_recipes() {
         }
 
         localStorage.setItem("searchResults", JSON.stringify(data.results));
-        window.location.href = "https://arhaidar.github.io/SavorSpot/pages/results.html";
-        console.log(window.location.href);  //DEBUGG
+        window.location.href = "/pages/results.html";
     } 
     catch (error) {
         console.error("Error fetching recipes:", error);
