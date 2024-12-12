@@ -1,5 +1,3 @@
-//
-console.log(window.location.href); //DEBUG
 document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.getElementById("resultsContainer");
     const results = JSON.parse(localStorage.getItem("searchResults"));
@@ -18,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="recipe-card">
             <img src="${recipe.image}" alt="${recipe.title}">
             <h2>${recipe.title}</h2>
-            <a href="/pages/recipeDetails.html?id=${recipe.id}" class="view-button">View Recipe</a>
+            <a href="/SavorSpot/pages/results.html?id=${recipe.id}" class="view-button">View Recipe</a>
         </div>
     `).join("");
 });
