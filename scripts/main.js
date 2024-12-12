@@ -105,5 +105,4 @@ async function get_random_recipe() {
     }
 }
 
-search_but.addEventListener("click", search_recipes);
-lucky_but.addEventListener("click", get_random_recipe);
+search_but.addEventL
