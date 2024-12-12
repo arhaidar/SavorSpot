@@ -72,6 +72,7 @@ async function search_recipes() {
 
         localStorage.setItem("searchResults", JSON.stringify(data.results));
         window.location.href = "/pages/results.html";
+        console.log(window.location.href);  //DEBUGG
     } 
     catch (error) {
         console.error("Error fetching recipes:", error);

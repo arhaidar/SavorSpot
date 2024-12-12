@@ -1,4 +1,5 @@
 //
+console.log(window.location.href); //DEBUG
 document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.getElementById("resultsContainer");
     const results = JSON.parse(localStorage.getItem("searchResults"));
